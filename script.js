@@ -47,7 +47,7 @@ window.addEventListener("resize", function () {
 });
 
 function files(index) {
-  var data = `
+  const data = `
      ./male0001.png
      ./male0002.png
      ./male0003.png
@@ -386,12 +386,12 @@ function render() {
 }
 
 function scaleImage(img, ctx) {
-  var canvas = ctx.canvas;
-  var hRatio = canvas.width / img.width;
-  var vRatio = canvas.height / img.height;
-  var ratio = Math.max(hRatio, vRatio);
-  var centerShift_x = (canvas.width - img.width * ratio) / 2;
-  var centerShift_y = (canvas.height - img.height * ratio) / 2;
+  const canvas = ctx.canvas;
+  const hRatio = canvas.width / img.width;
+  const vRatio = canvas.height / img.height;
+  const ratio = Math.max(hRatio, vRatio);
+  const centerShift_x = (canvas.width - img.width * ratio) / 2;
+  const centerShift_y = (canvas.height - img.height * ratio) / 2;
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   ctx.drawImage(
     img,
